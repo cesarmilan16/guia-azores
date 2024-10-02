@@ -32,4 +32,6 @@ Este proyecto es una guía turística de la isla de **San Miguel** en las **Azor
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/tuusuario/guia-san-miguel-azores.git
-   Importante: en el script.js pon tu propia API Key.
+  
+
+Importante: en el script.js pon tu propia API Key.
