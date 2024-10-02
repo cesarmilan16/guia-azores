@@ -1,0 +1,450 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */ 
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: bisque;
+    background-color: #0c7253;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin: 0 3rem;
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    li {
+        margin: 0 8rem;
+    }
+}
+
+.bold {
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+               -2px -2px 4px rgba(0, 128, 128, 0.7); /* Sombra doble */
+    background-image: url(/img/azores-header.webp);
+    height: 35rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Se centra vertical y horizontal */
+
+    /* Flexbox para centrar vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 50rem;
+    }
+}
+
+.navegacion {
+    background-color: #17837a; /* Color de fondo de la barra */
+    display: flex; /* Flexbox para organizar horizontalmente */
+    flex-direction: column;
+    text-align: center;
+}
+
+.navegacion__enlace {
+    color: bisque;
+    padding: 1rem; /* Espaciado interno de los enlaces */
+    font-size: 1.4rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave en el hover */
+    display: flex; /* Flexbox para controlar el contenido del enlace */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    flex-grow: 1; /* Esto hace que cada enlace crezca y ocupe el mismo espacio */
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
+    border-bottom: .5px solid rgba(99, 241, 194, 0.096); /* Borde muy fino y transparente */
+}
+
+.navegacion__enlace:first-child {
+    border-top: 1px solid rgba(99, 241, 194, 0.096);
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        flex-direction: row;
+        justify-content: space-around; /* Distribuye los enlaces con espacio entre ellos */
+        align-items: center; /* Centra verticalmente los enlaces */
+        font-size: 1.6rem;
+        border-bottom: none;
+    }
+
+    .navegacion__enlace {
+        padding: 2rem; /* Añadide padding */
+        height: 6rem; /* Altura adecuada para los enlaces */
+        width: auto; /* Elimina el width 100% en pantallas grandes para permitir espacio */
+        border-bottom: 0;
+    }
+}
+
+
+.navegacion__enlace:hover {
+    background-color: #19948a; /* Color de fondo cuando se hace hover o está activo */
+}
+
+.navegacion__enlace:focus {
+    background-color: initial; /* Restablecer el color tras el clic */
+    outline: none; /* Eliminar borde de enfoque predeterminado */
+}
+
+.section {
+    margin: 2rem;
+    text-align: center;
+}
+
+.contenedor__neuroformismo {
+    margin: 3rem auto; /* Centra el contenedor horizontalmente */
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background: #218365;
+    box-shadow: 36px 36px 40px #1b6a52,
+                -36px -36px 40px #279c78;
+    width: 95%; /* Ajusta el ancho a un 80% del ancho de la página (puedes cambiarlo) */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+}
+
+.section__titulos {
+    background-color: #238042;
+    padding: 0.5rem 1rem; /* Espaciado interno para el rectángulo */
+    border-radius: 6px; /* Bordes redondeados */
+    display: inline-block; /* Para que el rectángulo solo ocupe el ancho del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    margin-top: 1rem;
+}
+
+.apartados {
+    list-style: none;
+}
+
+.texto-descripcion {
+    font-size: 1.4rem;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+.alinear-izquierda {
+    text-align: left;
+    margin: 0 1rem;
+}
+
+.alinear-izquierda.texto-corto {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .alinear-izquierda.texto-corto {
+        text-align: left;
+    }
+}
+
+.contenedor__tiempo {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.caja {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: width 0.3s ease, height 0.3s ease, padding-top 0.3s ease; /* Añade transición */
+}
+
+.caja h1 {
+    font-size: 20px;
+}
+
+.caja h2 {
+font-size: 16px;
+}
+
+.caja h3 {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {    
+    .caja {
+        padding-top: 6rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    .caja h1 {
+        font-size: 2em; /* Tamaño predeterminado deseado para pantallas grandes */
+    }
+
+    .caja h2 {
+        font-size: 1.5em; /* Tamaño predeterminado deseado para pantallas grandes */
+    }
+
+    .caja h3 {
+        font-size: 1.2em; /* Tamaño predeterminado deseado para pantallas grandes */
+    }
+}
+
+.caja1 {
+    background-color: #f7f7f780;
+    color: bisque;
+}
+
+.caja2 {
+    background-color: #155e637e;
+    color: bisque;
+}
+
+.caja3 {
+    background-color: #ffb84d86;
+    color: bisque;
+}
+
+.imagen-seccion {
+    display: block; /* Asegura que la imagen se muestre como bloque */
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 20rem; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Recorta la imagen si no mantiene la relación de aspecto */
+    object-position: 50% 60%;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .imagen-seccion {
+        height: 40rem;
+    }
+}
+
+.section-enlace {
+    margin-left: 1rem;
+}
+
+.imagen-enlace {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
+.imagen-enlace:hover {
+    transform: scale(1.2); /* Aumenta un 20% el tamaño al hacer hover */
+}
+
+
+.boton-info {
+    appearance: button;
+    background-color: #1b5f0d;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: bisque;
+    cursor: pointer;
+    display: block; /* Predeterminado: El botón ocupa toda la línea */
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 10px auto 0; /* Centrado en pantallas pequeñas por defecto */
+    outline: none;
+    overflow: visible;
+    padding: 6px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    
+    white-space: nowrap;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+    .boton-info {
+        display: inline-block; /* El botón se muestra en línea con el texto */
+        margin-left: 2rem; /* Añade margen lateral para separar el botón del texto */
+        margin-right: 0; /* Elimina el centrado automático de pantallas pequeñas */
+        margin-top: 0;
+        vertical-align: middle;
+    }
+}
+
+
+.boton-info:after {
+    background-clip: padding-box;
+    background-color: #238042;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.boton-info:main, .boton-info:focus {
+    user-select: auto;
+}
+
+.boton-info:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.boton-info:disabled {
+    cursor: auto;
+}
+
+.boton-info:active:after {
+    border-width: 0 0 0px;
+}
+
+.boton-info:active {
+    padding-bottom: 10px;
+}
+
+.boton-tiempo {
+    margin: 0 auto;
+}
+
+.contenedor__prediccion {
+    margin: 2rem 0 0 0;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    text-align: center; /* Asegura que el texto dentro del párrafo esté centrado */
+}
+
+.dropdown-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.8s ease, max-height 0.8s ease;
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    max-height: 900px; /* Ajusta este valor según el contenido */
+}
+
+.parrafo-info {
+    margin: 0 auto;
+    max-width: 850px;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.parrafo-info, 
+.center {
+    text-align: center;
+}
+
+.parrafo-info.alinear-izquierda {
+    text-align: left;
+}
+
+.prevision-tiempo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 785px) {
+    .prevision-tiempo {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.forecast {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: #6cf7d46e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 120px;
+    height: 130px;
+}
+
+.forecast p {
+    margin: 0 2px;
+    font-size: 1.2rem;
+}
+
+.forecast-tiempo {
+    font-size: 1.1rem;
+}
+
+.forecast h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.footer {
+    margin-top: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #1b7950a4 0%, #1b795000 100%);
+}
