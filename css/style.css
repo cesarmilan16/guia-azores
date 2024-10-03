@@ -110,6 +110,9 @@ li {
         align-items: center; /* Centra verticalmente los enlaces */
         font-size: 1.6rem;
         border-bottom: none;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     .navegacion__enlace {
