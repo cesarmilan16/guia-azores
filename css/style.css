@@ -445,6 +445,21 @@ font-size: 16px;
     text-transform: uppercase;
 }
 
+.up {
+    position: fixed;
+    bottom: 5rem;
+    right: .05rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.up img {
+    width: 40px;
+    height: auto;
+}
+
 .footer {
     margin-top: 2.5rem;
     padding: 1rem;
