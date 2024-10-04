@@ -443,6 +443,14 @@ font-size: 16px;
     text-transform: uppercase;
 }
 
+.up-navegacion {
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+.up-boton:active {
+    transform: scale(1.2);
+}
+
 .up-boton {
     position: fixed;
     bottom: 5rem;
@@ -451,12 +459,7 @@ font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 100; /* Asegúrate de que esté encima de otros elementos */
-    transition: transform 0.5s ease; /* Transición suave */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.up-boton:active {
-    transform: scale(1.2);
 }
 
 .up-boton img {
