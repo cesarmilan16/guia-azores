@@ -454,12 +454,13 @@ font-size: 16px;
 .up-boton {
     position: fixed;
     bottom: 5rem;
-    right: .05rem;
+    right: .6rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 100; /* Asegúrate de que esté encima de otros elementos */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: auto;
 }
 
 .up-boton img {
