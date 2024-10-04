@@ -103,6 +103,10 @@ li {
     border-top: 1px solid rgba(99, 241, 194, 0.096);
 }
 
+.navegacion__enlace:active {
+    background-color: #19948a;
+}
+
 @media (min-width: 768px) {
     .navegacion {
         flex-direction: row;
@@ -115,22 +119,16 @@ li {
         z-index: 1000;
     }
 
+    .navegacion__enlace:hover {
+        background-color: #19948a; /* Color de fondo cuando se hace hover o está activo */
+    }
+
     .navegacion__enlace {
         padding: 2rem; /* Añadide padding */
         height: 6rem; /* Altura adecuada para los enlaces */
         width: auto; /* Elimina el width 100% en pantallas grandes para permitir espacio */
         border-bottom: 0;
     }
-}
-
-
-.navegacion__enlace:hover {
-    background-color: #19948a; /* Color de fondo cuando se hace hover o está activo */
-}
-
-.navegacion__enlace:focus {
-    background-color: initial; /* Restablecer el color tras el clic */
-    outline: none; /* Eliminar borde de enfoque predeterminado */
 }
 
 .section {
@@ -445,7 +443,7 @@ font-size: 16px;
     text-transform: uppercase;
 }
 
-.up {
+.up-boton {
     position: fixed;
     bottom: 5rem;
     right: .05rem;
@@ -453,11 +451,23 @@ font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 100; /* Asegúrate de que esté encima de otros elementos */
+    transition: transform 0.5s ease; /* Transición suave */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.up img {
+.up-boton:active {
+    transform: scale(1.2);
+}
+
+.up-boton img {
     width: 40px;
     height: auto;
+}
+
+@media (min-width: 768px) {
+    .up-navegacion {
+        display: none
+    }
 }
 
 .footer {

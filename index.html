@@ -16,7 +16,7 @@
     </header>
     
     
-    <nav class="navegacion">
+    <nav id="navegacion" class="navegacion">
         <a href="#lagoa" class="navegacion__enlace" 
         onclick="event.preventDefault(); scrollToElement('lagoa', 10)">Lagoa das Sete</a>
         <a href="#Furnas" class="navegacion__enlace" onclick="scrollToElement('furnas', 10)">Furnas</a>
@@ -981,7 +981,7 @@
                                 </a>
                         </div>
                     </li>
-                </ul>                
+                </ul>     
             </div>
         </section>
 
@@ -1007,9 +1007,11 @@
             </div>
         </div>
 
-        <button class="up">
-            <img src="/img/botton-arrow-up.png" alt="boton up">
-        </button>
+        <a href="#navegacion" class="up-navegacion">
+            <button class="up-boton">
+                <img src="/img/botton-arrow-up.png" alt="boton up">
+            </button>
+        </a>
 
         <footer class="footer">
             <p>Casi todos los derechos reservados ©</p>
