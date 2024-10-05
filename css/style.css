@@ -460,13 +460,16 @@ font-size: 14px;
     outline: none;
 }
 
-.up-boton:active {
-    transform: scale(1.2);
-}
 
-.up-boton img {
+
+.up-imagen {
     width: 40px;
     height: auto;
+    transition: transform 0.5s ease;
+}
+
+.up-imagen:active {
+    transform: scale(1.2);
 }
 
 button, img {
