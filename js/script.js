@@ -40,7 +40,7 @@ function scrollToElement(elementId, offset = 0) {
 // Funciones que cargan cuando cargue la web
 window.addEventListener('load', () => {
   // API Key y ciudades
-  // const apiKey = ''; // Asegúrate de que la clave esté correcta
+  //const apiKey = ''; // Asegúrate de que la clave esté correcta
   const cities = ['lagoa', 'furnas', 'ribeira grande', 'vila franca do campo', 'ponta delgada']; // Cambia las ciudades aquí
   const city = { name: 'Nordeste', lat: 37.7854, lon: -25.2802 }; // Coordenadas de Nordeste
   
@@ -178,9 +178,8 @@ window.addEventListener('load', () => {
                 const date = new Date(forecast.dt * 1000); // Convertir timestamp a fecha
                 const day = date.toLocaleDateString('es-ES', { weekday: 'long'}); 
 
-                // Tomar la previsión cercana al mediodía (12:00)
-                const hour = date.getHours();
-                if (hour === 14) {
+                // Tomar la primera previsión disponible para cada día
+                if (!dailyForecasts[day]) {
                     dailyForecasts[day] = forecast;
                 }
             });

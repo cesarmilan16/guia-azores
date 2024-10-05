@@ -196,7 +196,7 @@ li {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    padding-top: 3rem;
+    padding-top: 2rem;
     width: 120px;
     height: 120px;
     border-radius: 10px;
@@ -209,7 +209,7 @@ li {
 }
 
 .caja h2 {
-font-size: 16px;
+font-size: 14px;
 }
 
 .caja h3 {
@@ -467,6 +467,10 @@ font-size: 16px;
 .up-boton img {
     width: 40px;
     height: auto;
+}
+
+button, img {
+    -webkit-tap-highlight-color:transparent ;
 }
 
 @media (min-width: 768px) {
