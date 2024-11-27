@@ -37,6 +37,6 @@ Este proyecto es una guía turística de la isla de **San Miguel** en las **Azor
   
 ## **Página web**
 
-[text](https://guia-azores-san-miguel.netlify.app/)
+[www.guia-azore-san-miguel.netlify.app](https://guia-azores-san-miguel.netlify.app/)
 
 **Importante: Tener tu propia API Key de openweathermap.**
