@@ -7,6 +7,7 @@ Este proyecto es una guía turística de la isla de **San Miguel** en las **Azor
 - **HTML**: Para la estructura del contenido.
 - **CSS**: Para la presentación y estilo visual de la web.
 - **JavaScript**: Para la interacción dinámica y mejorar la experiencia del usuario.
+- **Node.js**: Para el backend para consultar la API.
 
 ## **Características**
 
@@ -26,6 +27,7 @@ Este proyecto es una guía turística de la isla de **San Miguel** en las **Azor
 - `index.html`: Página principal con la lista de destinos y actividades en la isla.
 - `styles.css`: Archivo de estilos que da formato a toda la web.
 - `scripts.js`: Código JavaScript para interactividad, como la navegación entre secciones, animaciones y otros elementos interactivos.
+- `weather.js y forecast.js`: Código JavaScript para la conexión con la API
 
 ## **Instalación**
 
@@ -33,5 +35,8 @@ Este proyecto es una guía turística de la isla de **San Miguel** en las **Azor
    ```bash
    git clone https://github.com/tuusuario/guia-san-miguel-azores.git
   
+## **Página web**
 
-**Importante: en el script.js pon tu propia API Key de openweathermap.**
+[text](https://guia-azores-san-miguel.netlify.app/)
+
+**Importante: Tener tu propia API Key de openweathermap.**
