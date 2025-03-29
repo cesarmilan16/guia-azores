@@ -137,7 +137,7 @@ li {
 }
 
 .contenedor__neuroformismo {
-    margin: 3rem auto; /* Centra el contenedor horizontalmente */
+    margin: 6rem auto; /* Centra el contenedor horizontalmente */
     padding: 0.5rem 1rem;
     border-radius: 15px;
     background: #218365;
@@ -145,7 +145,16 @@ li {
                 -36px -36px 40px #279c78;
     width: 95%; /* Ajusta el ancho a un 80% del ancho de la página (puedes cambiarlo) */
     max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.6s ease-out;
+    will-change: transform, opacity;
 }
+
+.contenedor__neuroformismo.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .section__titulos {
     background-color: #238042;

@@ -37,6 +37,23 @@ function scrollToElement(elementId, offset = 0) {
     }
 }
 
+const elementos = document.querySelectorAll('.contenedor__neuroformismo');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Solo una vez
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elementos.forEach(elemento => {
+  observer.observe(elemento);
+});
+
 // Funciones que cargan cuando cargue la web
 window.addEventListener('load', () => {
     // Ciudades y coordenadas
