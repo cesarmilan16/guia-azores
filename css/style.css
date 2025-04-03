@@ -59,7 +59,7 @@ li {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
                -2px -2px 4px rgba(0, 128, 128, 0.7); /* Sombra doble */
     background-image: url(/img/azores-header.webp);
-    height: 35rem;
+    min-height: 35rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; /* Se centra vertical y horizontal */
