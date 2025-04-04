@@ -453,6 +453,8 @@ font-size: 14px;
 }
 
 .up-boton {
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     bottom: 5rem;
     right: .6rem;
@@ -463,13 +465,17 @@ font-size: 14px;
     padding: 0;
     cursor: pointer;
     z-index: 100; /* Asegúrate de que esté encima de otros elementos */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.up-boton.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .up-boton:focus {
     outline: none;
 }
-
-
 
 .up-imagen {
     width: 40px;
@@ -486,7 +492,7 @@ button, img {
 }
 
 @media (min-width: 768px) {
-    .up-navegacion {
+    .up-boton {
         display: none
     }
 }

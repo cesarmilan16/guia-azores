@@ -54,6 +54,26 @@ elementos.forEach(elemento => {
   observer.observe(elemento);
 });
 
+// Muestra el botón al hacer scroll
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollToTopBtn')
+    if (window.scrollY > 300) {
+        btn.classList.add("show")
+    } else {
+        btn.classList.remove("show")
+    }
+})
+
+// Subir al principio al hacer click
+const btn = document.getElementById('scrollToTopBtn')
+
+btn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
 // Funciones que cargan cuando cargue la web
 window.addEventListener('load', () => {
     // Ciudades y coordenadas
